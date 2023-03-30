@@ -1,0 +1,19 @@
+Temos estudado o arquivo dos CEPS. Trata-se de um arquivo de registros de tamanho fixo. Cada registro possui 300 bytes. A vantagem dessa abordagem é que podemos fazer acesso direto a qualquer registro usando o comando seek. Fizemos isso na implementação da busca binária, o que reduziu substancialmente o número de leituras para se encontrar um determinado registro. Para que esse método funcione, precisamos que o arquivo esteja ordenado pela chave de busca. Se desejarmos fazer uma busca por algum outro critério, como por exemplo, nome do logradouro, não poderemos usar esse método, nos restando a busca sequencial, que já vimos ser bastante ineficiente: com esta abordagem, só podemos ter uma única chave de pesquisa. Usar uma outra chave implicaria em reordenar o arquivo. 
+
+ 
+
+Uma solução para essa questão é usar um arquivo extra – um índice. Mas o que é um arquivo de índice? Um arquivo de índice é um arquivo que contém apenas as chaves de busca e a posição física onde o registro correspondente está armazenado. As chaves são organizadas por alguma estrutura de dados (lista ordenada, tabela de hash, árvores). Quando deseja-se procurar uma chave, esta é consultada no arquivo de índice e não no arquivo de dados. Como o arquivo de índice está organizado pela chave, consegue-se encontrar rapidamente a posição no arquivo de dados onde aquele item está armazenado. Depois que se sabe a posição do registro, basta posicionar a cabeça de leitura no arquivo de dados e consumir o registro correspondente.  
+
+ 
+
+A sua tarefa neste trabalho é criar um arquivo de índice para o arquivo dos CEPS. Use o arquivo não ordenado (o primeiro que trabalhamos na busca sequencial). Leia o arquivo dos ceps sequencialmente. Use um contador, para guardar o número do registro atual, começando de zero. Defina uma estrutura para o arquivo de índice. Esta estrutura terá dois campos: o CEP (que é a nossa chave) e a posição (um número inteiro, que corresponde à posição do registro onde o registro correspondente ao CEP da chave está armazenado). Escreva cada um dos registros do índice em um novo arquivo. Quando terminar, ordene esse arquivo pelo CEP e salve o seu arquivo de índice final. Escreva uma função para realizar a busca de um CEP dado usando este arquivo novo criado. 
+
+ 
+
+Anexe na sua resposta o arquivo fonte da sua solução, um PDF com o código fonte elaborado. No PDF responda às seguintes questões: 
+
+ 
+
+Qual tamanho final do seu arquivo de índice? Compare esse tamanho com o arquivo de dados original.  
+Tente abrir o arquivo gerado em um editor de textos plano (p.ex. vs code). O arquivo gerado é um arquivo texto ou binário. Cole na sua resposta um print da tela com o arquivo de índice aberto.  
+Pergunte ao chat-gpt, quais são os tipos de índice comumente usados em banco de dados, as vantagens e desvantagens. Copie e cole a resposta do chat gpt no documento, indicando claramente a pergunta elaborada e que a resposta não é de sua autoria, e sim copiada do chat GPT. Em seguida faça um resumo com suas próprias palavras do que entendeu sobre o tema.  

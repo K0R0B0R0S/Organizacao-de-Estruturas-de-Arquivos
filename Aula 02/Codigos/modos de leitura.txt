@@ -1,0 +1,9 @@
+Modo de abertura    Significado
+r                   Abre um arquivo de texto para leitura, posiciona o cursor no inicio do arquivo.
+w                   Abre um arquivo de texto para escrita, caso o arquivo exista ele é recriado e posiciona o cursor no inicio do arquivo.
+a                   Abre um arquivo de texto para escrita, cria o arquivo se não existir e posiciona o cursor no dinal do arquivo.
+r+                  Abre um arquivo de texto para leitura e escrita, posiciona o cursor no inicio do arquivo.
+w+                  Abre um arquivo de texto para escrita e leitura, caso o arquivo exista ele não é recriado, posiciona o cursos no
+                    inicio do arquivo.
+r+b                 Abre um arquivo binário para leitura e escrita. posiciona o cursor no inicio do arquivo.
+rb                  Abre um arquivo binário para leitura. posiciona o cursor no inicio do arquivo.

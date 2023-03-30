@@ -1,0 +1,1 @@
+Esse exercício contempla a implementação de um código de busca de cep utilizando o algoritimo de busca binária no arquivo 'cep_ordenado.dat'

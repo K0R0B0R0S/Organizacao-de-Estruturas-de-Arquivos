@@ -21,8 +21,13 @@ int main(int argc, char **argv)
     int indexCEP;
 
     FILE *f = fopen(input, "rb");
-    FILE *index = criaArquivoIndex(f);
-    ordenaArquivo(index);
+	FILE *index;
+	if(!arquivoExiste("indexFile.dat")){
+		index = criaArquivoIndex(f);
+		ordenaArquivo(index);
+	}else{
+		index = fopen("indexFile.dat", "rb");
+	}
 	
 	printf("");
     indexCEP = buscaBinaria(index, argv[1]);

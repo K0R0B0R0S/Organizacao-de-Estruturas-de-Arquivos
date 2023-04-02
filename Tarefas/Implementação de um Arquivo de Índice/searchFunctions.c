@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "structs.h"
-#include "searchFunctions.h"
+#include "include/structs.h"
+#include "include/searchFunctions.h"
 
 int buscaBinaria(FILE *f, char *CEP)
 {

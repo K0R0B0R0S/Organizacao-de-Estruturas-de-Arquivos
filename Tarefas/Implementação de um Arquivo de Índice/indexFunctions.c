@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "structs.h"
-#include "indexFunctions.h"
+#include "include/structs.h"
+#include "include/indexFunctions.h"
 
 int comparaCEP(const void *i1, const void *i2)
 {

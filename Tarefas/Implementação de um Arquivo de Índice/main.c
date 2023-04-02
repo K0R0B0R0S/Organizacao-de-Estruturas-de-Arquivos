@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "indexFunctions.h"
-#include "searchFunctions.h"
-#include "structs.h"
+#include "include/indexFunctions.h"
+#include "include/searchFunctions.h"
+#include "include/structs.h"
 
 
 #define input "cep.dat"

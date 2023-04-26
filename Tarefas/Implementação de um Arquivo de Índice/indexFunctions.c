@@ -22,9 +22,10 @@ int arquivoExiste(char* name){
 FILE* criaArquivoIndex(FILE *origin){
     Endereco e;
     Indice cepIndex;
-    int cont = 0;
+    int cont, qt = 0;
 
     FILE *indexFile = fopen("indexFile.dat", "wb");
+    
     while (!feof(origin))
     {
         fread(&e, sizeof(Endereco), 1, origin);

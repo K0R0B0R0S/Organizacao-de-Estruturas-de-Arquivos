@@ -17,7 +17,9 @@ struct _Endereco
 
 int compara(const void *e1, const void *e2)
 {
-	return strncmp(((Endereco*)e1)->cep,((Endereco*)e2)->cep,8);
+	Endereco* endereco1 = (Endereco*) e1;
+	Endereco* endereco2 = (Endereco*) e2;
+	return strncmp(endereco1->cep,endereco2->cep,8);
 }
 
 int main(int argc, char**argv)
